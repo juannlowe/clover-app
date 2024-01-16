@@ -1,3 +1,8 @@
+import Header from '../Header';
+import Body from '../Body';
+import Footer from '../Footer';
+import SignIn from "./SignIn"
+import '../../App.css';
 
 function Home(){
     const logout =()=>{
@@ -5,8 +10,11 @@ function Home(){
         window.location.reload()
     }
     return (
-        <div>
-            <p>Home Page</p>
+        <div className="App">
+      <SignIn/>
+      <Header />
+      <Body />
+      <Footer />
             <button onClick={logout}>Log Out</button>
         </div>
     )
