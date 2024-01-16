@@ -1,10 +1,10 @@
 import React from 'react'
-import Home from './components/googleSignIn/Home'
+import SignIn from './components/googleSignIn/SignIn'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Home />
+    <SignIn />
   </React.StrictMode>,
 )
