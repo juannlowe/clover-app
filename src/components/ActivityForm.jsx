@@ -12,7 +12,7 @@ const ActivityForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Join Activity</h2>
+      <h2>Join Peter's Band</h2>
 
       <label htmlFor="fullName">Full Name:</label>
       <input
