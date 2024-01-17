@@ -2,7 +2,7 @@ import { useState } from "react";
 import { auth, provider } from "./config";
 import {signInWithPopup} from "firebase/auth";
 import { useEffect } from "react";
-import Home from "./Home"
+import ResponsiveAppBar from "./ResponsiveAppBar"
 import { Button } from '@mui/material'
 
 function SignIn(){
@@ -19,7 +19,7 @@ function SignIn(){
     },[])
     return (
         <div>
-            {value ? <Home /> :
+            {value ? <ResponsiveAppBar /> :
             <Button onClick={handleClick} variant="contained">Sing in with google</Button>
     }
         </div>
