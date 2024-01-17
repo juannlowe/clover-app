@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import SettingsIcon from '@mui/icons-material/Settings'
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['About Us', 'Activities', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const logout =()=>{
@@ -36,6 +36,12 @@ function ResponsiveAppBar() {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+  const handleMenuClick = (menuItem) => {
+    if (menuItem === 'Logout') {
+      logout();
+    }
+    handleCloseUserMenu();
   };
 
   const handleCloseUserMenu = () => {
@@ -133,10 +139,6 @@ function ResponsiveAppBar() {
           {/* add other icons as bell and settings */}
           <SettingsIcon/>
           <NotificationsIcon />
-          <Button onClick={logout} sx={{ my: 2, color: 'white', display: 'block', marginLeft: 'auto' }}>
-            Logout
-          </Button>
-
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -160,7 +162,7 @@ function ResponsiveAppBar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <MenuItem key={setting} onClick={() => handleMenuClick(setting)}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
