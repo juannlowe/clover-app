@@ -1,5 +1,5 @@
 import React from 'react'
-import SignIn from './components/googleSignIn/SignIn'
+import SignIn from './components/googleSignIn/SignIn.jsx'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
