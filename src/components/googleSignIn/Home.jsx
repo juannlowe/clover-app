@@ -16,6 +16,11 @@ import AdbIcon from '@mui/icons-material/Adb';
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
+const logout =()=>{
+  localStorage.clear()
+  window.location.reload()
+}
+
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -123,6 +128,10 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
+          {/* add other icons as bell and settings */}
+          <Button onClick={logout} sx={{ my: 2, color: 'white', display: 'block', marginLeft: 'auto' }}>
+            Logout
+          </Button>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
