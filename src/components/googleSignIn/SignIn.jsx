@@ -18,9 +18,21 @@ function SignIn(){
         setValue(localStorage.getItem('email'))
     },[])
     return (
-        <div>
+        <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '100vh',
+          }}>
             {value ? <ResponsiveAppBar /> :
-            <Button onClick={handleClick} variant="contained">Sing in with google</Button>
+            <Button
+            onClick={handleClick}
+            variant="contained"
+            sx={{ backgroundColor: 'black', color: 'white' }}
+          >
+            Sign in with Google
+          </Button>
     }
         </div>
     )
