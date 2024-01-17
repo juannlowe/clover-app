@@ -12,6 +12,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import SettingsIcon from '@mui/icons-material/Settings'
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -129,6 +131,8 @@ function ResponsiveAppBar() {
             ))}
           </Box>
           {/* add other icons as bell and settings */}
+          <SettingsIcon/>
+          <NotificationsIcon />
           <Button onClick={logout} sx={{ my: 2, color: 'white', display: 'block', marginLeft: 'auto' }}>
             Logout
           </Button>
