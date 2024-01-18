@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import SettingsIcon from '@mui/icons-material/Settings'
+import SignIn from './googleSignIn/SignIn';
 
 const pages = ['About Us', 'Activities', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -135,6 +136,7 @@ function ResponsiveAppBar() {
             ))}
           </Box>
           {/* add other icons as bell and settings */}
+          <SignIn/>
           <SettingsIcon/>
           <NotificationsIcon />
           <Box sx={{ flexGrow: 0 }}>

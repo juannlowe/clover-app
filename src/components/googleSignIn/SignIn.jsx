@@ -17,20 +17,14 @@ function SignIn(){
         setValue(localStorage.getItem('email'))
     },[])
     return (
-        <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: value ? null : 'center',
-            height: '100vh',
-          }}>
-            <Button
+        <div>
+          {value ? "Welcome Back!" : <Button
             onClick={handleClick}
             variant="contained"
-            sx={{ backgroundColor: 'black', color: 'white' }}
+            sx={{ backgroundColor: 'white', color: 'black' }}
           >
-            Sign in with Google
-          </Button>
+            Sign in
+          </Button>}
         </div>
     )
 }
