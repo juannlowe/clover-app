@@ -2,7 +2,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import ResponsiveAppBar from './ResponsiveAppBar';
 // import SignIn from './googleSignIn/SignIn';
 import Footer from './Footer'
-import Form from './Form.tsx'
+import JoinActivity from './JoinActivity.tsx'
+import CreateActivity from './CreateActivity.tsx'
 
 function Layout() {
   return (
@@ -10,7 +11,10 @@ function Layout() {
       <div>
         {/* <SignIn /> */}
         <ResponsiveAppBar />
-        <Form/>
+        <div style={{display : 'flex', justifyContent : 'space-around', margin : ' 2rem'}}>
+          <JoinActivity/>
+          <CreateActivity/>
+        </div>
         <Footer/>
       </div>
     </Router>

@@ -5,18 +5,16 @@ import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import Button from '@mui/material/Button'
 
 
-export default function RecipeReviewCard() {
+export default function JoinActivity() {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
+           <Avatar alt="Juan Branca" src="./src/components/pictures/juan.jpeg" />
         }
         action={
           <IconButton aria-label="settings">
@@ -32,9 +30,14 @@ export default function RecipeReviewCard() {
         image="/src/components/pictures/volley.png"
         alt="Volley"
       />
-      <CardContent>
+      <CardContent style={{ display: 'flex', justifyContent: 'center'}}>
         <Typography variant="body2" color="text.secondary">
-          Join
+        <Button
+            variant="contained"
+            sx={{ backgroundColor: 'black', color: 'white' }}
+          >
+            Join Activity!
+          </Button>
         </Typography>
       </CardContent>
     </Card>
