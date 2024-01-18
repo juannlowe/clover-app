@@ -2,7 +2,6 @@ import { useState } from "react";
 import { auth, provider } from "./config";
 import {signInWithPopup} from "firebase/auth";
 import { useEffect } from "react";
-import ResponsiveAppBar from "./ResponsiveAppBar"
 import { Button } from '@mui/material'
 
 function SignIn(){
@@ -22,10 +21,9 @@ function SignIn(){
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'center',
+            justifyContent: value ? null : 'center',
             height: '100vh',
           }}>
-            {value ? <ResponsiveAppBar /> :
             <Button
             onClick={handleClick}
             variant="contained"
@@ -33,7 +31,6 @@ function SignIn(){
           >
             Sign in with Google
           </Button>
-    }
         </div>
     )
 }
