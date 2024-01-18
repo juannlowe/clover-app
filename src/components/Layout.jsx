@@ -11,7 +11,7 @@ function Layout() {
       <div>
         {/* <SignIn /> */}
         <ResponsiveAppBar />
-        <div style={{display : 'flex', justifyContent : 'space-around', margin : ' 2rem'}}>
+        <div style={{display : 'flex', justifyContent : 'space-around', margin : ' 3rem'}}>
           <JoinActivity/>
           <CreateActivity/>
         </div>
