@@ -1,10 +1,10 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-import ResponsiveAppBar from './ResponsiveAppBar';
-import Footer from './Footer'
+import ResponsiveAppBar from './ResponsiveAppBar.js';
+import Footer from './Footer.jsx'
 import JoinActivity from './JoinActivity.tsx'
 import CreateActivity from './CreateActivity.tsx'
 
-function Layout() {
+export const Layout =()=> {
   return (
     <Router>
       <div>
@@ -19,4 +19,3 @@ function Layout() {
   );
 }
 
-export default Layout;

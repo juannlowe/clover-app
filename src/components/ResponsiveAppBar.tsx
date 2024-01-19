@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import SettingsIcon from '@mui/icons-material/Settings'
-import SignIn from './googleSignIn/SignIn';
+import SignIn from './googleSignIn/SignIn.tsx';
 
 const pages = ['About Us', 'Activities', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -27,17 +27,17 @@ function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenNavMenu = (event: Event) => {
+  //   setAnchorElNav(event.currentTarget || null);
+  // };
+  // const handleOpenUserMenu = (event: Event) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-  const handleMenuClick = (menuItem) => {
+  const handleMenuClick = (menuItem: string) => {
     if (menuItem === 'Logout') {
       logout();
     }
@@ -76,7 +76,7 @@ function ResponsiveAppBar() {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
+              onClick={()=> null}
               color="inherit"
             >
               <MenuIcon />
@@ -141,7 +141,7 @@ function ResponsiveAppBar() {
           <NotificationsIcon />
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <IconButton onClick={()=> null} sx={{ p: 0 }}>
                 <Avatar alt="Juan Branca" src="./src/components/pictures/juan.jpeg" />
               </IconButton>
             </Tooltip>
