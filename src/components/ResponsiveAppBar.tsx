@@ -30,9 +30,9 @@ function ResponsiveAppBar() {
   // const handleOpenNavMenu = (event: Event) => {
   //   setAnchorElNav(event.currentTarget || null);
   // };
-  // const handleOpenUserMenu = (event: Event) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
+  const handleOpenUserMenu = (event: Event) => {
+    setAnchorElUser(event.currentTarget);
+  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -141,7 +141,7 @@ function ResponsiveAppBar() {
           <NotificationsIcon />
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={()=> null} sx={{ p: 0 }}>
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Juan Branca" src="./src/components/pictures/juan.jpeg" />
               </IconButton>
             </Tooltip>

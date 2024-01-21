@@ -11,7 +11,7 @@ function SignIn(){
     const [value,setValue] = useState('')
     const handleClick = ()=>{
         signInWithPopup(auth,provider).then((data)=>{
-          const firstName = getFirsName(data.user.displayName)
+          const firstName = getFirsName(data.user.displayName  as string)
             setValue(firstName as string)
             localStorage.setItem("displayName", firstName as string)
         })
