@@ -11,7 +11,7 @@ const Footer = () => {
         width: '100%',
       }}
     >
-      <p>&copy; {new Date().getFullYear()} All Rights Reserved Clover</p>
+      <p>&copy; {new Date().getFullYear()} All Rights Reserved Clover / Join cool activities!</p>
     </footer>
   );
 };
