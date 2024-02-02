@@ -27,7 +27,7 @@ export default function JoinActivity() {
   };
 
   return (
-    <Fade in={true}>
+    <Fade in={true} timeout={{ enter: 2500 }}>
       <Card sx={{ maxWidth: 345 }}>
         <CardHeader
           avatar={
