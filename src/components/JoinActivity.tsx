@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -12,6 +13,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import TextField from '@mui/material/TextField';
+import Fade from '@mui/material/Fade';
 
 export default function JoinActivity() {
   const [open, setOpen] = useState(false);
@@ -25,49 +27,48 @@ export default function JoinActivity() {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
-        avatar={
-          <Avatar alt="Juan Branca" src="./src/components/pictures/juan.jpeg" />
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title="Juan Branca"
-        subheader="Love Sports :)"
-      />
-      <CardMedia
-        component="img"
-        height="194"
-        image="/src/components/pictures/volley.png"
-        alt="Volley"
-      />
-      <CardContent style={{ display: 'flex', justifyContent: 'center' }}>
-        <Typography variant="body2" color="text.secondary">
-          <Button
-            variant="contained"
-            sx={{ backgroundColor: 'black', color: 'white' }}
-            onClick={handleClickOpen}
-          >
-            Join Activity!
-          </Button>
-        </Typography>
-        <Dialog open={open} onClose={handleClose}>
-          <DialogTitle>Join Activity Form</DialogTitle>
-          <DialogContent>
-            {/* Add your form fields here */}
-            <TextField label="Name" fullWidth />
-            {/* Add more form fields as needed */}
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={handleClose}>Cancel</Button>
-            <Button onClick={handleClose}>Join</Button>
-          </DialogActions>
-        </Dialog>
-      </CardContent>
-    </Card>
+    <Fade in={true}>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardHeader
+          avatar={
+            <Avatar alt="Juan Branca" src="./src/components/pictures/juan.jpeg" />
+          }
+          action={
+            <IconButton aria-label="settings">
+              <MoreVertIcon />
+            </IconButton>
+          }
+          title="Juan Branca"
+          subheader="Love Sports :)"
+        />
+        <CardMedia
+          component="img"
+          height="194"
+          image="/src/components/pictures/volley.png"
+          alt="Volley"
+        />
+        <CardContent style={{ display: 'flex', justifyContent: 'center' }}>
+          <Typography variant="body2" color="text.secondary">
+            <Button
+              variant="contained"
+              sx={{ backgroundColor: 'black', color: 'white' }}
+              onClick={handleClickOpen}
+            >
+              Join Activity!
+            </Button>
+          </Typography>
+          <Dialog open={open} onClose={handleClose}>
+            <DialogTitle>Join Activity Form</DialogTitle>
+            <DialogContent>
+              <TextField label="Name" fullWidth />
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={handleClose}>Cancel</Button>
+              <Button onClick={handleClose}>Join</Button>
+            </DialogActions>
+          </Dialog>
+        </CardContent>
+      </Card>
+    </Fade>
   );
 }
-
