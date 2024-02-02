@@ -61,6 +61,9 @@ export default function JoinActivity() {
             <DialogTitle>Join Activity Form</DialogTitle>
             <DialogContent>
               <TextField label="Name" fullWidth />
+              <TextField label="Last Name" fullWidth />
+              <TextField label="Age" fullWidth />
+              <TextField label="Location" fullWidth />
             </DialogContent>
             <DialogActions>
               <Button onClick={handleClose}>Cancel</Button>
