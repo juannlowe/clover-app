@@ -54,20 +54,20 @@ export default function JoinActivity() {
               sx={{ backgroundColor: 'black', color: 'white' }}
               onClick={handleClickOpen}
             >
-              Join Activity!
+              Create Activity!
             </Button>
           </Typography>
           <Dialog open={open} onClose={handleClose}>
             <DialogTitle>Create Activity</DialogTitle>
             <DialogContent>
-              <TextField label="Name" fullWidth />
-              <TextField label="Last Name" fullWidth />
-              <TextField label="Age" fullWidth />
+              <TextField label="Activity Name" fullWidth />
               <TextField label="Location" fullWidth />
+              <TextField label="Time" fullWidth />
+              <TextField label="Skill Level" fullWidth />
             </DialogContent>
             <DialogActions>
               <Button onClick={handleClose}>Cancel</Button>
-              <Button onClick={handleClose}>Join</Button>
+              <Button onClick={handleClose}>Create</Button>
             </DialogActions>
           </Dialog>
         </CardContent>
