@@ -5,7 +5,7 @@ const AboutUsPage = () => {
   return (
     <div>
       <h1>About Us</h1>
-      <p>This is the About Us page content. Add any relevant information about your organization or company here.</p>
+      <p>This is the About Us page content</p>
     </div>
   );
 };
